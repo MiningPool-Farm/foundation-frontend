@@ -35,10 +35,10 @@ export default function Footer() {
       <Container>
         <Row>
           <Col md="3">
-            <h1 className="title">Mining Pool Farm</h1>
-            A Product of Austin, Texas USA<br />
+            <h1 className="title">Mining Pool Farm <span className="h6">Since 2022</span></h1>
+            A Product From Austin, Texas USA<br />
             Support@MiningPool.Farm<br />
-            Since 2022
+            v0.3
           </Col>
           <Col md="3">
             <Nav>
@@ -48,13 +48,13 @@ export default function Footer() {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/landing-page" tag={Link}>
+                <NavLink to="/dashboard" tag={Link}>
                   Dashboard
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink to="/register-page" tag={Link}>
-                  Configure
+                <NavLink to="/landing-page" tag={Link}>
+                  *Examples
                 </NavLink>
               </NavItem>
             </Nav>
@@ -62,17 +62,12 @@ export default function Footer() {
           <Col md="3">
             <Nav>
               <NavItem>
-                <NavLink href="https://creative-tim.com/contact-us?ref=blkdsr-footer">
+                <NavLink href="/about">
                   About
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://creative-tim.com/about-us?ref=blkdsr-footer">
-                  Why Mine
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://creative-tim.com/blog?ref=blkdsr-footer">
+                <NavLink href="/terms-privacy">
                   Terms & Privacy
                 </NavLink>
               </NavItem>

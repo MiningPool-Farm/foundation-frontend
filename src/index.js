@@ -25,8 +25,11 @@ import "./assets/demo/demo.css";
 
 import Index from "./views/Index.js";
 import LandingPage from "./views/examples/LandingPage.js";
-import RegisterPage from "./views/examples/RegisterPage.js";
-import ProfilePage from "./views/examples/ProfilePage.js";
+//import RegisterPage from "./views/examples/RegisterPage.js";
+//import ProfilePage from "./views/examples/ProfilePage.js";
+import Dashboard from "./views/Dashboard.js";
+import About from "./views/About.js";
+import Terms from "./views/Terms-Privacy.js";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -36,13 +39,25 @@ ReactDOM.render(
         path="/landing-page"
         render={(props) => <LandingPage {...props} />}
       />
-      <Route
+      {/*<Route
         path="/register-page"
         render={(props) => <RegisterPage {...props} />}
       />
       <Route
         path="/profile-page"
         render={(props) => <ProfilePage {...props} />}
+      />*/}
+      <Route
+        path="/dashboard"
+        render={(props) => <Dashboard {...props} />}
+      />
+      <Route
+        path="/about"
+        render={(props) => <About {...props} />}
+      />
+      <Route
+        path="/terms-privacy"
+        render={(props) => <Terms {...props} />}
       />
       <Redirect from="/" to="/components" />
     </Switch>

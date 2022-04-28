@@ -192,15 +192,15 @@ export default function IndexNavbar() {
                 {/*Getting started*/}
               </DropdownToggle>
               <DropdownMenu className="dropdown-with-icons">
-                <DropdownItem href="https://demos.creative-tim.com/blk-design-system-react/#/documentation/overview">
+              <DropdownItem href="/dashboard">
+                  <i className="tim-icons icon-paper" />
+                  Dashboard
+                </DropdownItem>
+                <DropdownItem href="/about">
                   <i className="tim-icons icon-paper" />
                   About
                 </DropdownItem>
-                <DropdownItem tag={Link} to="/register-page">
-                  <i className="tim-icons icon-bullet-list-67" />
-                  Why Mine
-                </DropdownItem>
-                <DropdownItem tag={Link} to="/landing-page">
+                <DropdownItem tag={Link} to="/terms-privacy">
                   <i className="tim-icons icon-image-02" />
                   Terms & Privacy
                 </DropdownItem>
@@ -236,7 +236,7 @@ export default function IndexNavbar() {
                             onClick={(e) => setIconsTabs(1)}
                             href="#pablo"
                           >
-                            <i className="tim-icons icon-spaceship" />
+                            GPU
                           </NavLink>
                         </NavItem>
                         <NavItem>
@@ -247,18 +247,7 @@ export default function IndexNavbar() {
                             onClick={(e) => setIconsTabs(2)}
                             href="#pablo"
                           >
-                            <i className="tim-icons icon-settings-gear-63" />
-                          </NavLink>
-                        </NavItem>
-                        <NavItem>
-                          <NavLink
-                            className={classnames({
-                              active: iconTabs === 3,
-                            })}
-                            onClick={(e) => setIconsTabs(3)}
-                            href="#pablo"
-                          >
-                            <i className="tim-icons icon-bag-16" />
+                            CPU
                           </NavLink>
                         </NavItem>
                       </Nav>
@@ -267,32 +256,12 @@ export default function IndexNavbar() {
                       <TabContent className="tab-space" activeTab={"link" + iconTabs}>
                         <TabPane tabId="link1">
                           <p>
-                            Collaboratively administrate empowered markets via
-                            plug-and-play networks. Dynamically procrastinate B2C
-                            users after installed base benefits. <br />
-                            <br />
-                            Dramatically visualize customer directed convergence
-                            without revolutionary ROI.
+                            GPU If-Then form goes here
                           </p>
                         </TabPane>
                         <TabPane tabId="link2">
                           <p>
-                            Completely synergize resource taxing relationships via
-                            premier niche markets. Professionally cultivate one-to-one
-                            customer service with robust ideas. <br />
-                            <br />
-                            Dynamically innovate resource-leveling customer service
-                            for state of the art customer service.
-                          </p>
-                        </TabPane>
-                        <TabPane tabId="link3">
-                          <p>
-                            Efficiently unleash cross-media information without
-                            cross-media value. Quickly maximize timely deliverables
-                            for real-time schemas. <br />
-                            <br />
-                            Dramatically maintain clicks-and-mortar solutions without
-                            functional solutions.
+                            CPU If-Then form goes here
                           </p>
                         </TabPane>
                       </TabContent>
@@ -363,9 +332,17 @@ export default function IndexNavbar() {
                 </Button>
               </div>*/}
               <div className="text-center text-muted mb-4 mt-3">
-                <small>Need a Wallet? Click a coin below!</small>
-                <hr></hr>
-                <small>Enter a Wallet Address for any of our supported coins and we'll build your Dashboard! Note that you can display more than one coin at once on your Dashboard.</small>
+                <p>Need a Wallet? Click a coin below!<br />
+                  GPU: 
+                  <img alt="..." width={50} src={require("../../assets/img/erg.png")}/>
+                  <img alt="..." width={50} src={require("../../assets/img/etc.png")}/>
+                  <img alt="..." width={50} src={require("../../assets/img/firo.png")}/>
+                  <img alt="..." width={50} src={require("../../assets/img/rvn.png")}/>
+                  <br />
+                  CPU: 
+                  <img alt="..." width={50} src={require("../../assets/img/xmr.png")}/>
+                  <img alt="..." width={50} src={require("../../assets/img/rtm.png")}/>
+                </p>
               </div>
               <Form role="form">
                 {/*<FormGroup className="mb-3">

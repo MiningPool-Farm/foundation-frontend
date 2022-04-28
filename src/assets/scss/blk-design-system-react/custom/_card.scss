@@ -4,7 +4,7 @@
     position: relative;
     width: 100%;
     margin-bottom: 30px;
-    box-shadow: $box-shadow;
+    /*box-shadow: $box-shadow;*/
 
 
     label {
@@ -113,11 +113,11 @@
     border: 2px solid $default;
 
     .card-header {
-      margin: -100px auto 20px;
+      margin: -35px auto 0px;
     }
 
     img {
-      width: 150px;
+      width: 40px;
     }
     hr {
       width: 20%;

@@ -54,38 +54,40 @@ export default function PageHeader() {
             width={100}
             height={100}
           />*/}
-          <h1 className="h1-seo text-center mt-md mb-lg">Let's Mine Some Crypto!</h1>
-          <hr></hr>
+          <h1 className="h1-seo text-center mt-xl mb-lg"><span className="text-danger">Under Construction...</span></h1>
         {/*</div>*/}
         <Row>
+        <Col md="2">
+          <h2>GPU</h2>
+        </Col>
         <Col md="2">
           <Card className="card-coin card-plain">
             <CardHeader>
               <img
                 alt="..."
                 className="img-center img-fluid"
-                src={require("../../assets/img/bitcoin.png")}
+                src={require("../../assets/img/erg.png")}
               />
             </CardHeader>
             <CardBody>
               <Row>
                 <Col className="text-center" md="12">
-                  <h4 className="text-uppercase">Ergo</h4>
+                  <h4 className="text-uppercase">Ergo</h4><br />
                   <span>ERG</span>
                   <hr className="line-info" />
                 </Col>
               </Row>
               <Row>
                 <ListGroup>
-                  <ListGroupItem>0 Miners</ListGroupItem>
-                  <ListGroupItem>0Gh/s Hashrate</ListGroupItem>
-                  <ListGroupItem>0 Blocks</ListGroupItem>
+                  <ListGroupItem className="text-danger">Coming Soon</ListGroupItem>
+                  <ListGroupItem><br /></ListGroupItem>
+                  <ListGroupItem><br /></ListGroupItem>
                 </ListGroup>
               </Row>
             </CardBody>
             <CardFooter className="text-center">
               <Button className="btn-simple" color="primary">
-                Coming Soon
+                Fee: 1%
               </Button>
             </CardFooter>
           </Card>
@@ -96,13 +98,13 @@ export default function PageHeader() {
               <img
                 alt="..."
                 className="img-center img-fluid"
-                src={require("../../assets/img/bitcoin.png")}
+                src={require("../../assets/img/rvn.png")}
               />
             </CardHeader>
             <CardBody>
               <Row>
                 <Col className="text-center" md="12">
-                  <h4 className="text-uppercase">Raven</h4>
+                  <h4 className="text-uppercase">Raven</h4><br />
                   <span>RVN</span>
                   <hr className="line-info" />
                 </Col>
@@ -128,7 +130,7 @@ export default function PageHeader() {
               <img
                 alt="..."
                 className="img-center img-fluid"
-                src={require("../../assets/img/etherum.png")}
+                src={require("../../assets/img/etc.png")}
               />
             </CardHeader>
             <CardBody>
@@ -160,13 +162,13 @@ export default function PageHeader() {
               <img
                 alt="..."
                 className="img-center img-fluid"
-                src={require("../../assets/img/etherum.png")}
+                src={require("../../assets/img/firo.png")}
               />
             </CardHeader>
             <CardBody>
               <Row>
                 <Col className="text-center" md="12">
-                  <h4 className="text-uppercase">Firo</h4>
+                  <h4 className="text-uppercase">Firo</h4><br />
                   <span>FIRO</span>
                   <hr className="line-success" />
                 </Col>
@@ -186,13 +188,19 @@ export default function PageHeader() {
             </CardFooter>
           </Card>
         </Col>
+        </Row>
+        <Row>
+        <Col md="2">
+          <h2>CPU</h2>
+          <h4 className="text-success">Always Free!</h4>
+        </Col>
         <Col md="2">
           <Card className="card-coin card-plain">
             <CardHeader>
               <img
                 alt="..."
                 className="img-center img-fluid"
-                src={require("../../assets/img/ripp.png")}
+                src={require("../../assets/img/xmr.png")}
               />
             </CardHeader>
             <CardBody>
@@ -200,6 +208,38 @@ export default function PageHeader() {
                 <Col className="text-center" md="12">
                   <h4 className="text-uppercase">Monero</h4>
                   <span>XMR</span>
+                  <hr className="line-warning" />
+                </Col>
+              </Row>
+              <Row>
+                <ListGroup>
+                  <ListGroupItem>1000 Miners</ListGroupItem>
+                  <ListGroupItem>50Gh/s Hashrate</ListGroupItem>
+                  <ListGroupItem>5000 Blocks</ListGroupItem>
+                </ListGroup>
+              </Row>
+            </CardBody>
+            <CardFooter className="text-center">
+              <Button className="btn-simple" color="primary">
+                Fee: 0%
+              </Button>
+            </CardFooter>
+          </Card>
+        </Col>
+        <Col md="2">
+          <Card className="card-coin card-plain">
+            <CardHeader>
+              <img
+                alt="..."
+                className="img-center img-fluid"
+                src={require("../../assets/img/rtm.png")}
+              />
+            </CardHeader>
+            <CardBody>
+              <Row>
+                <Col className="text-center" md="12">
+                  <h4 className="text-uppercase">Raptoreum</h4>
+                  <span>RTM</span>
                   <hr className="line-warning" />
                 </Col>
               </Row>
