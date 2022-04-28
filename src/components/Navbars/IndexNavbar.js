@@ -17,6 +17,7 @@
 */
 import React from "react";
 import { Link } from "react-router-dom";
+import classnames from "classnames";
 // reactstrap components
 import {
   Button,
@@ -30,16 +31,37 @@ import {
   NavItem,
   NavLink,
   Nav,
+  Modal,
+  Form,
+  FormGroup,
+  InputGroup,
+  InputGroupAddon,
+  InputGroupText,
+  Input,
+  Label,
   Container,
   Row,
   Col,
+  UncontrolledPopover,
+  PopoverBody,
+  PopoverHeader,
   UncontrolledTooltip,
+  Card,
+  CardHeader,
+  CardBody,
+  TabPane,
+  TabContent,
 } from "reactstrap";
 
 export default function IndexNavbar() {
   const [collapseOpen, setCollapseOpen] = React.useState(false);
   const [collapseOut, setCollapseOut] = React.useState("");
   const [color, setColor] = React.useState("navbar-transparent");
+  const [iconTabs, setIconsTabs] = React.useState(1);
+  const [demoModal, setDemoModal] = React.useState(false);
+  const [formModal, setFormModal] = React.useState(false);
+  const [emailFocus, setEmailFocus] = React.useState(false);
+  const [passwordFocus, setPasswordFocus] = React.useState(false);
   React.useEffect(() => {
     window.addEventListener("scroll", changeColor);
     return function cleanup() {
@@ -106,7 +128,7 @@ export default function IndexNavbar() {
             <Row>
               <Col className="collapse-brand" xs="6">
                 <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                  BLK•React
+                  MiningPoolFarm
                 </a>
               </Col>
               <Col className="collapse-close text-right" xs="6">
@@ -166,43 +188,250 @@ export default function IndexNavbar() {
                 nav
                 onClick={(e) => e.preventDefault()}
               >
-                <i className="fa fa-cogs d-lg-none d-xl-none" />
-                Getting started
+                <i className="tim-icons icon-book-bookmark d-lg-none d-xl-none" />
+                {/*Getting started*/}
               </DropdownToggle>
               <DropdownMenu className="dropdown-with-icons">
                 <DropdownItem href="https://demos.creative-tim.com/blk-design-system-react/#/documentation/overview">
                   <i className="tim-icons icon-paper" />
-                  Documentation
+                  About
                 </DropdownItem>
                 <DropdownItem tag={Link} to="/register-page">
                   <i className="tim-icons icon-bullet-list-67" />
-                  Register Page
+                  Why Mine
                 </DropdownItem>
                 <DropdownItem tag={Link} to="/landing-page">
                   <i className="tim-icons icon-image-02" />
-                  Landing Page
-                </DropdownItem>
-                <DropdownItem tag={Link} to="/profile-page">
-                  <i className="tim-icons icon-single-02" />
-                  Profile Page
+                  Terms & Privacy
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
+            
+            <Modal
+            isOpen={demoModal}
+            toggle={() => setDemoModal(false)}
+            modalClassName="modal-black"
+            >
+              <div className="modal-header justify-content-center">
+                <button className="close" onClick={() => setDemoModal(false)}>
+                  <i className="tim-icons icon-simple-remove" />
+                </button>
+                <h4 className="title title-up">Configure Worker</h4>
+              </div>
+              <div className="modal-body">
+                <Col className="ml-auto mr-auto">
+                  {/*<div className="mb-3">
+                    <small className="text-uppercase font-weight-bold">
+                      Select your Coin.
+                    </small>
+                  </div>*/}
+                  <Card>
+                    <CardHeader>
+                      <Nav className="nav-tabs-info" role="tablist" tabs>
+                        <NavItem>
+                          <NavLink
+                            className={classnames({
+                              active: iconTabs === 1,
+                            })}
+                            onClick={(e) => setIconsTabs(1)}
+                            href="#pablo"
+                          >
+                            <i className="tim-icons icon-spaceship" />
+                          </NavLink>
+                        </NavItem>
+                        <NavItem>
+                          <NavLink
+                            className={classnames({
+                              active: iconTabs === 2,
+                            })}
+                            onClick={(e) => setIconsTabs(2)}
+                            href="#pablo"
+                          >
+                            <i className="tim-icons icon-settings-gear-63" />
+                          </NavLink>
+                        </NavItem>
+                        <NavItem>
+                          <NavLink
+                            className={classnames({
+                              active: iconTabs === 3,
+                            })}
+                            onClick={(e) => setIconsTabs(3)}
+                            href="#pablo"
+                          >
+                            <i className="tim-icons icon-bag-16" />
+                          </NavLink>
+                        </NavItem>
+                      </Nav>
+                    </CardHeader>
+                    <CardBody>
+                      <TabContent className="tab-space" activeTab={"link" + iconTabs}>
+                        <TabPane tabId="link1">
+                          <p>
+                            Collaboratively administrate empowered markets via
+                            plug-and-play networks. Dynamically procrastinate B2C
+                            users after installed base benefits. <br />
+                            <br />
+                            Dramatically visualize customer directed convergence
+                            without revolutionary ROI.
+                          </p>
+                        </TabPane>
+                        <TabPane tabId="link2">
+                          <p>
+                            Completely synergize resource taxing relationships via
+                            premier niche markets. Professionally cultivate one-to-one
+                            customer service with robust ideas. <br />
+                            <br />
+                            Dynamically innovate resource-leveling customer service
+                            for state of the art customer service.
+                          </p>
+                        </TabPane>
+                        <TabPane tabId="link3">
+                          <p>
+                            Efficiently unleash cross-media information without
+                            cross-media value. Quickly maximize timely deliverables
+                            for real-time schemas. <br />
+                            <br />
+                            Dramatically maintain clicks-and-mortar solutions without
+                            functional solutions.
+                          </p>
+                        </TabPane>
+                      </TabContent>
+                    </CardBody>
+                  </Card>
+                </Col>
+              </div>
+              <div className="modal-footer">
+                {/*<Button color="default" type="button">
+                  Nice Button
+                </Button>
+                <Button
+                  color="danger"
+                  type="button"
+                  onClick={() => setDemoModal(false)}
+                >
+                  Close
+                </Button>*/}
+              </div>
+            </Modal>
+            
             <NavItem>
               <Button
                 className="nav-link d-none d-lg-block"
                 color="default"
-                onClick={scrollToDownload}
+                onClick={() => setDemoModal(true)}
               >
-                <i className="tim-icons icon-cloud-download-93" /> Configure
+                <i className="tim-icons icon-molecule-40" /> Configure
               </Button>
             </NavItem>
+
+            <Modal
+            modalClassName="modal-black"
+            isOpen={formModal}
+            toggle={() => setFormModal(false)}
+          >
+            <div className="modal-header justify-content-center">
+              <button className="close" onClick={() => setFormModal(false)}>
+                <i className="tim-icons icon-simple-remove text-white" />
+              </button>
+              <div className="text-muted text-center ml-auto mr-auto">
+                <h4 className="title title-up mb-0">Sign in</h4>
+              </div>
+            </div>
+            <div className="modal-body">
+              {/*<div className="btn-wrapper text-center">
+                <Button
+                  className="btn-neutral btn-icon"
+                  color="default"
+                  href="#pablo"
+                  onClick={(e) => e.preventDefault()}
+                >
+                  <img
+                    alt="..."
+                    src={require("../../assets/img/github.svg").default}
+                  />
+                </Button>
+                <Button
+                  className="btn-neutral btn-icon"
+                  color="default"
+                  href="#pablo"
+                  onClick={(e) => e.preventDefault()}
+                >
+                  <img
+                    alt="..."
+                    src={require("../../assets/img/google.svg").default}
+                  />
+                </Button>
+              </div>*/}
+              <div className="text-center text-muted mb-4 mt-3">
+                <small>Need a Wallet? Click a coin below!</small>
+                <hr></hr>
+                <small>Enter a Wallet Address for any of our supported coins and we'll build your Dashboard! Note that you can display more than one coin at once on your Dashboard.</small>
+              </div>
+              <Form role="form">
+                {/*<FormGroup className="mb-3">
+                  <InputGroup
+                    className={classnames("input-group-alternative", {
+                      "input-group-focus": emailFocus,
+                    })}
+                  >
+                    <InputGroupAddon addonType="prepend">
+                      <InputGroupText>
+                        <i className="tim-icons icon-email-85" />
+                      </InputGroupText>
+                    </InputGroupAddon>
+                    <Input
+                      placeholder="Email"
+                      type="email"
+                      onFocus={(e) => setEmailFocus(true)}
+                      onBlur={(e) => setEmailFocus(false)}
+                    />
+                  </InputGroup>
+                  </FormGroup>*/}
+                <FormGroup>
+                  <InputGroup
+                    className={classnames("input-group-alternative", {
+                      "input-group-focus": passwordFocus,
+                    })}
+                  >
+                    <InputGroupAddon addonType="prepend">
+                      <InputGroupText>
+                        <i className="tim-icons icon-wallet-43" />
+                      </InputGroupText>
+                    </InputGroupAddon>
+                    <Input
+                      placeholder="Wallet Address"
+                      type="text"
+                      onFocus={(e) => setPasswordFocus(true)}
+                      onBlur={(e) => setPasswordFocus(false)}
+                    />
+                  </InputGroup>
+                </FormGroup>
+                <FormGroup check className="mt-3">
+                  <Label check id="save">
+                    <Input defaultChecked type="checkbox" />
+                    <span className="form-check-sign" />
+                    Save Address
+                  </Label>
+                  <UncontrolledPopover placement="right" target="save">
+                  {/*<PopoverHeader>Popover on Right</PopoverHeader>*/}
+                  <PopoverBody>
+                    Saves this address to a local-only cookie, per our Privacy Policy.
+                  </PopoverBody>
+                </UncontrolledPopover>
+                </FormGroup>
+                <div className="text-center">
+                  <Button className="my-4" color="primary" type="button">
+                    Sign in
+                  </Button>
+                </div>
+              </Form>
+            </div>
+          </Modal>
             <NavItem>
               <Button
                 className="nav-link d-none d-lg-block"
                 color="primary"
-                target="_blank"
-                href="https://www.creative-tim.com/product/blk-design-system-pro-react?ref=bdsr-user-archive-index-navbar-upgrade-pro"
+                onClick={() => setFormModal(true)}
               >
                 <i className="tim-icons icon-spaceship" /> Sign In
               </Button>

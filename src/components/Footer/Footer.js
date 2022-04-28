@@ -35,7 +35,10 @@ export default function Footer() {
       <Container>
         <Row>
           <Col md="3">
-            <h1 className="title">BLK•</h1>
+            <h1 className="title">Mining Pool Farm</h1>
+            A Product of Austin, Texas USA<br />
+            Support@MiningPool.Farm<br />
+            Since 2022
           </Col>
           <Col md="3">
             <Nav>
@@ -46,17 +49,12 @@ export default function Footer() {
               </NavItem>
               <NavItem>
                 <NavLink to="/landing-page" tag={Link}>
-                  Landing
+                  Dashboard
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink to="/register-page" tag={Link}>
-                  Register
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink to="/profile-page" tag={Link}>
-                  Profile
+                  Configure
                 </NavLink>
               </NavItem>
             </Nav>
@@ -65,28 +63,23 @@ export default function Footer() {
             <Nav>
               <NavItem>
                 <NavLink href="https://creative-tim.com/contact-us?ref=blkdsr-footer">
-                  Contact Us
+                  About
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://creative-tim.com/about-us?ref=blkdsr-footer">
-                  About Us
+                  Why Mine
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://creative-tim.com/blog?ref=blkdsr-footer">
-                  Blog
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://opensource.org/licenses/MIT">
-                  License
+                  Terms & Privacy
                 </NavLink>
               </NavItem>
             </Nav>
           </Col>
           <Col md="3">
-            <h3 className="title">Follow us:</h3>
+            <h3 className="title">Connect With Us</h3>
             <div className="btn-wrapper profile">
               <Button
                 className="btn-icon btn-neutral btn-round btn-simple"
@@ -98,7 +91,7 @@ export default function Footer() {
                 <i className="fab fa-twitter" />
               </Button>
               <UncontrolledTooltip delay={0} target="tooltip622135962">
-                Follow us
+                Twitter
               </UncontrolledTooltip>
               <Button
                 className="btn-icon btn-neutral btn-round btn-simple"
@@ -107,10 +100,10 @@ export default function Footer() {
                 id="tooltip230450801"
                 target="_blank"
               >
-                <i className="fab fa-facebook-square" />
+                <i className="fab fa-discord" />
               </Button>
               <UncontrolledTooltip delay={0} target="tooltip230450801">
-                Like us
+                Discord
               </UncontrolledTooltip>
               <Button
                 className="btn-icon btn-neutral btn-round btn-simple"
@@ -119,10 +112,10 @@ export default function Footer() {
                 id="tooltip318450378"
                 target="_blank"
               >
-                <i className="fab fa-dribbble" />
+                <i className="fab fa-github" />
               </Button>
               <UncontrolledTooltip delay={0} target="tooltip318450378">
-                Follow us
+                Github
               </UncontrolledTooltip>
             </div>
           </Col>
