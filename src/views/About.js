@@ -82,12 +82,21 @@ export default function About() {
             className="shapes circle"
             src={require("../assets/img/cercuri.png")}
           />
-          <div className="content-center">
-            <Row className="row-grid justify-content-between align-items-center text-left">
-              <Col lg="6" md="6">
-                <h2>About</h2>
-              </Col>
-            </Row>
+          <div className="mt-xl">
+            <Container>
+              <Row>
+                <Col md="12">
+                  <img
+                    alt="..."
+                    className="mb-sm"
+                    src={require("../assets/img/austin.jpg")}
+                  />
+                  <p>
+                    Coming Soon...
+                  </p>
+                </Col>
+              </Row>
+            </Container>
           </div>
         </div>
         <Footer />

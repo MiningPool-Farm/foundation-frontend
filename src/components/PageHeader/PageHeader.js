@@ -54,7 +54,8 @@ export default function PageHeader() {
             width={100}
             height={100}
           />*/}
-          <h1 className="h1-seo text-center mt-xl mb-lg"><span className="text-danger">Under Construction...</span></h1>
+          <h1 className="h1-seo text-center mt-xl"><span className="text-danger">v0.4 - Under Construction...</span></h1>
+          <h3 className="h3-seo d-none d-sm-block text-center mb-md">Easy. Anonymous. Low-Fee. Open Source.</h3>
         {/*</div>*/}
         <Row>
         <Col md="2">
@@ -259,7 +260,6 @@ export default function PageHeader() {
           </Card>
         </Col>
       </Row>
-      <h3 className="h3-seo d-none d-sm-block text-center">Easy. Anonymous. Low-Fee. Open Source.</h3>
       </Container>
     </div>
   );

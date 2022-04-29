@@ -95,11 +95,11 @@ export default function Dashboard() {
                     id="square8"
                     style={{ transform: squares7and8 }}
                   />
-                  <Row className="row-grid justify-content-between align-items-center text-left">
-                    <Col lg="6" md="6">
-                      <h2>Dashboard</h2>
-                    </Col>
-                  </Row>
+                </Col>
+              </Row>
+              <Row className="row-grid justify-content-between align-items-center text-left">
+                <Col md="12">
+                  <h2>Dashboard</h2>
                 </Col>
               </Row>
               <div className="register-bg" />

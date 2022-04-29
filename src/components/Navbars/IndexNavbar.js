@@ -105,7 +105,7 @@ export default function IndexNavbar() {
             Farm
           </NavbarBrand>
           <UncontrolledTooltip placement="bottom" target="navbar-brand">
-            GPU & CPU Mining For Newcomers & Professionals
+            GPU & CPU Crypto Mining
           </UncontrolledTooltip>
           <button
             aria-expanded={collapseOpen}
@@ -127,7 +127,7 @@ export default function IndexNavbar() {
           <div className="navbar-collapse-header">
             <Row>
               <Col className="collapse-brand" xs="6">
-                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                <a href="#" onClick={(e) => e.preventDefault()}>
                   MiningPoolFarm
                 </a>
               </Col>
@@ -184,7 +184,7 @@ export default function IndexNavbar() {
                 caret
                 color="default"
                 data-toggle="dropdown"
-                href="#pablo"
+                href="#"
                 nav
                 onClick={(e) => e.preventDefault()}
               >
@@ -192,16 +192,12 @@ export default function IndexNavbar() {
                 {/*Getting started*/}
               </DropdownToggle>
               <DropdownMenu className="dropdown-with-icons">
-              <DropdownItem href="/dashboard">
-                  <i className="tim-icons icon-paper" />
-                  Dashboard
-                </DropdownItem>
                 <DropdownItem href="/about">
                   <i className="tim-icons icon-paper" />
                   About
                 </DropdownItem>
                 <DropdownItem tag={Link} to="/terms-privacy">
-                  <i className="tim-icons icon-image-02" />
+                  <i className="tim-icons icon-world" />
                   Terms & Privacy
                 </DropdownItem>
               </DropdownMenu>
@@ -234,9 +230,9 @@ export default function IndexNavbar() {
                               active: iconTabs === 1,
                             })}
                             onClick={(e) => setIconsTabs(1)}
-                            href="#pablo"
+                            href="#"
                           >
-                            GPU
+                            CPU
                           </NavLink>
                         </NavItem>
                         <NavItem>
@@ -245,9 +241,9 @@ export default function IndexNavbar() {
                               active: iconTabs === 2,
                             })}
                             onClick={(e) => setIconsTabs(2)}
-                            href="#pablo"
+                            href="#"
                           >
-                            CPU
+                            GPU
                           </NavLink>
                         </NavItem>
                       </Nav>
@@ -255,14 +251,234 @@ export default function IndexNavbar() {
                     <CardBody>
                       <TabContent className="tab-space" activeTab={"link" + iconTabs}>
                         <TabPane tabId="link1">
-                          <p>
-                            GPU If-Then form goes here
-                          </p>
+                          <FormGroup check className="form-check-radio">
+                          <Label check className="mr-sm">
+                              <Input
+                                defaultChecked
+                                defaultValue="option2"
+                                id="exampleRadios1"
+                                name="exampleRadios"
+                                type="radio"
+                              />
+                              <span className="form-check-sign" />
+                              <img alt="..." width={40} src={require("../../assets/img/xmr.png")}/>
+                            </Label>
+                            <Label check className="mr-sm">
+                              <Input
+                                defaultValue="option2"
+                                id="exampleRadios1"
+                                name="exampleRadios"
+                                type="radio"
+                              />
+                              <span className="form-check-sign" />
+                              <img alt="..." width={40} src={require("../../assets/img/rtm.png")}/>
+                            </Label>
+                          </FormGroup>
+                          <br />
+                          <FormGroup check className="form-check-radio">
+                            <Label check className="mr-sm">
+                              <Input
+                                defaultChecked
+                                defaultValue="option2"
+                                id="exampleRadios1"
+                                name="exampleRadios"
+                                type="radio"
+                              />
+                              <span className="form-check-sign" />
+                              XMRig Miner
+                            </Label>
+                          </FormGroup>
+                          <br />
+                          <FormGroup>
+                            <InputGroup
+                              className={classnames("input-group-alternative mt-2", {
+                                "input-group-focus": passwordFocus,
+                              })}
+                            >
+                              <InputGroupAddon addonType="prepend">
+                                <InputGroupText>
+                                  <i className="tim-icons icon-wallet-43" />
+                                </InputGroupText>
+                              </InputGroupAddon>
+                              <Input
+                                placeholder="Wallet Address"
+                                type="text"
+                                onFocus={(e) => setPasswordFocus(true)}
+                                onBlur={(e) => setPasswordFocus(false)}
+                              />
+                            </InputGroup>
+                          </FormGroup>
+                          <br />
+                            <FormGroup check className="mt-3">
+                            <Label check id="save">
+                              <Input defaultChecked type="checkbox" />
+                              <span className="form-check-sign" />
+                              TLS
+                            </Label>
+                          </FormGroup>
+                          <br />
+                          <FormGroup>
+                            <InputGroup
+                              className={classnames("input-group-alternative mt-2", {
+                                "input-group-focus": passwordFocus,
+                              })}
+                            >
+                              <Input
+                                placeholder="Output of selections above..."
+                                type="textarea"
+                                onFocus={(e) => setPasswordFocus(true)}
+                                onBlur={(e) => setPasswordFocus(false)}
+                              />
+                            </InputGroup>
+                          </FormGroup>
                         </TabPane>
                         <TabPane tabId="link2">
-                          <p>
-                            CPU If-Then form goes here
-                          </p>
+                        <FormGroup check className="form-check-radio">
+                          <Label check className="mr-sm">
+                              <Input
+                                disabled
+                                defaultValue="option2"
+                                id="exampleRadios1"
+                                name="exampleRadios"
+                                type="radio"
+                              />
+                              <span className="form-check-sign" />
+                              <img alt="..." width={40} src={require("../../assets/img/erg.png")}/>
+                            </Label>
+                            <Label check className="mr-sm">
+                              <Input
+                                defaultChecked
+                                defaultValue="option2"
+                                id="exampleRadios1"
+                                name="exampleRadios"
+                                type="radio"
+                              />
+                              <span className="form-check-sign" />
+                              <img alt="..." width={40} src={require("../../assets/img/etc.png")}/>
+                            </Label>
+                            <Label check className="mr-sm">
+                              <Input
+                                defaultValue="option2"
+                                id="exampleRadios1"
+                                name="exampleRadios"
+                                type="radio"
+                              />
+                              <span className="form-check-sign" />
+                              <img alt="..." width={40} src={require("../../assets/img/rvn.png")}/>
+                            </Label>
+                            <Label check className="mr-sm">
+                              <Input
+                                defaultValue="option2"
+                                id="exampleRadios1"
+                                name="exampleRadios"
+                                type="radio"
+                              />
+                              <span className="form-check-sign" />
+                              <img alt="..." width={40} src={require("../../assets/img/firo.png")}/>
+                            </Label>
+                          </FormGroup>
+                          <br />
+                          <FormGroup check className="form-check-radio">
+                            <Label check className="mr-sm">
+                              <Input
+                                defaultChecked
+                                defaultValue="option2"
+                                id="exampleRadios1"
+                                name="exampleRadios"
+                                type="radio"
+                              />
+                              <span className="form-check-sign" />
+                              NVIDIA
+                            </Label>
+                            <Label check className="mr-sm">
+                              <Input
+                                defaultValue="option2"
+                                id="exampleRadios1"
+                                name="exampleRadios"
+                                type="radio"
+                              />
+                              <span className="form-check-sign" />
+                              AMD
+                            </Label>
+                            <Label check className="mr-sm">
+                              <Input
+                                disabled
+                                defaultValue="option2"
+                                id="exampleRadios1"
+                                name="exampleRadios"
+                                type="radio"
+                              />
+                              <span className="form-check-sign" />
+                              INTEL
+                            </Label>
+                          </FormGroup>
+                          <br />
+                          <FormGroup check className="form-check-radio">
+                            <Label check className="mr-sm">
+                              <Input
+                                defaultChecked
+                                defaultValue="option2"
+                                id="exampleRadios1"
+                                name="exampleRadios"
+                                type="radio"
+                              />
+                              <span className="form-check-sign" />
+                              T-Rex Miner
+                            </Label>
+                            <Label check className="mr-sm">
+                              <Input
+                                defaultValue="option2"
+                                id="exampleRadios1"
+                                name="exampleRadios"
+                                type="radio"
+                              />
+                              <span className="form-check-sign" />
+                              LOLMiner
+                            </Label>
+                          </FormGroup>
+                          <br />
+                          <FormGroup>
+                            <InputGroup
+                              className={classnames("input-group-alternative mt-2", {
+                                "input-group-focus": passwordFocus,
+                              })}
+                            >
+                              <InputGroupAddon addonType="prepend">
+                                <InputGroupText>
+                                  <i className="tim-icons icon-wallet-43" />
+                                </InputGroupText>
+                              </InputGroupAddon>
+                              <Input
+                                placeholder="Wallet Address"
+                                type="text"
+                                onFocus={(e) => setPasswordFocus(true)}
+                                onBlur={(e) => setPasswordFocus(false)}
+                              />
+                            </InputGroup>
+                          </FormGroup>
+                          <br />
+                            <FormGroup check className="mt-3">
+                            <Label check id="save">
+                              <Input defaultChecked type="checkbox" />
+                              <span className="form-check-sign" />
+                              TLS
+                            </Label>
+                          </FormGroup>
+                          <br />
+                          <FormGroup>
+                            <InputGroup
+                              className={classnames("input-group-alternative mt-2", {
+                                "input-group-focus": passwordFocus,
+                              })}
+                            >
+                              <Input
+                                placeholder="Output of selections above..."
+                                type="textarea"
+                                onFocus={(e) => setPasswordFocus(true)}
+                                onBlur={(e) => setPasswordFocus(false)}
+                              />
+                            </InputGroup>
+                          </FormGroup>
                         </TabPane>
                       </TabContent>
                     </CardBody>
@@ -311,7 +527,7 @@ export default function IndexNavbar() {
                 <Button
                   className="btn-neutral btn-icon"
                   color="default"
-                  href="#pablo"
+                  href="#"
                   onClick={(e) => e.preventDefault()}
                 >
                   <img
@@ -322,7 +538,7 @@ export default function IndexNavbar() {
                 <Button
                   className="btn-neutral btn-icon"
                   color="default"
-                  href="#pablo"
+                  href="#"
                   onClick={(e) => e.preventDefault()}
                 >
                   <img

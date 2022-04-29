@@ -36,15 +36,15 @@ export default function Footer() {
         <Row>
           <Col md="3">
             <h1 className="title">Mining Pool Farm <span className="h6">Since 2022</span></h1>
-            A Product From Austin, Texas USA<br />
+            A Product Of Austin, Texas USA<br />
             Support@MiningPool.Farm<br />
-            v0.3
+            v0.4
           </Col>
           <Col md="3">
             <Nav>
               <NavItem>
                 <NavLink to="/" tag={Link}>
-                  Home
+                  Coins
                 </NavLink>
               </NavItem>
               <NavItem>

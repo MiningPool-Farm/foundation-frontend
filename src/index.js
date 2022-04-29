@@ -34,7 +34,10 @@ import Terms from "./views/Terms-Privacy.js";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/components" render={(props) => <Index {...props} />} />
+      <Route
+        path="/coins"
+        render={(props) => <Index {...props} />}
+      />
       <Route
         path="/landing-page"
         render={(props) => <LandingPage {...props} />}
@@ -59,7 +62,7 @@ ReactDOM.render(
         path="/terms-privacy"
         render={(props) => <Terms {...props} />}
       />
-      <Redirect from="/" to="/components" />
+      <Redirect from="/" to="/coins" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
